@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div class="first">
+        <div class="child">
+            <div class="kol-sell">
+                <div class="startc">Обычная цена: 1449р.</div>
+                <div class="finishc">Цена по акции: 149р.</div>
+                <div class="infost">Остаток товара на 11.11.2050:</div>
+                <div class="ost">58</div>
+            </div>
+            <div class="icon"><img src="img/fil.png" alt=""></div>
+            <div class="forms">
+                <form class="auth" action="bd.php" method="post">
+                    <div class="ftext">Введите ваши данные в форму ниже:</div>
+                    <div class="vvod"><input type="text" name="uname" placeholder="Ваше имя"></div>
+                    <div class="vvod"><input type="text" name="uphone"placeholder="Ваш телефон"></div>
+                    <div id="mess" class="ftext" style="color: red;"></div>
+                    <div class="button"><input type="submit" value="ПОЛУЧИТЬ ЗА 149 РУБ."></div>
+                    <input type="hidden" name="sub1" value="123">
+                    <input type="hidden" name="utm_source" value="321">
+                    <input type="hidden" name="ip" value="192.168.1.1">
+                    
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            $(function(){
+
+var field = new Array("uname", "uphone");//поля обязательные
+       
+$(".auth").submit(function() {// обрабатываем отправку формы   
+    var error=0; // индекс ошибки
+    $(".auth").find(":input").each(function() {// проверяем каждое поле в форме
+        for(var i=0;i<field.length;i++){ // если поле присутствует в списке обязательных
+            if($(this).attr("name")==field[i]){ //проверяем поле формы на пустоту
+               
+                if(!$(this).val()){// если в поле пустое
+                    $(this).css('border', 'solid 2px red');// устанавливаем рамку красного цвета
+                    error=1;// определяем индекс ошибки      
+                                               
+                }
+                else{
+                    $(this).css('border', 'solid 2px rgb(98, 147, 216)');// устанавливаем рамку обычного цвета
+                }
+               
+            }              
+        }
+   })
+    if(error==0){ // если ошибок нет то отправляем данные
+        return true;
+        $("#mess").html("");
+    }
+    else{
+    if(error==1) var err_text = "Заполните поля";
+    $("#mess").html(err_text);
+    $("#mess").fadeIn("slow");
+    return false; //если в форме встретились ошибки , не  позволяем отослать данные на сервер.
+    }
+})
+});
+        </script>
+        
+    </div>
+</body>
+</html>

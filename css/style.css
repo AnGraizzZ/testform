@@ -1,0 +1,139 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'FontName'; 
+}
+
+.first
+{
+   /* padding-left: 25vw;
+    padding-right: 25vw;*/
+    text-align: center;
+    display: flex;
+  justify-content: center;
+}
+
+.child
+{
+    max-width: 960px;
+    border: 4px solid transparent;
+    border-image: rgba(1, 240, 255, 1.0);
+    border-image: -webkit-linear-gradient(left, rgba(1, 240, 255, 1.0), rgb(34, 98, 189));
+    border-image: -moz-linear-gradient(left, rgba(1, 240, 255, 1.0), rgba(34, 98, 189));
+    border-image: linear-gradient(to right, rgba(1, 240, 255, 1.0), rgba(34, 98, 189));
+    border-image-slice: 1;
+    padding: 10px 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+  height: 100%;
+  align-content: stretch;
+  justify-content: center;
+
+
+}
+
+.kol-sell
+{
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    margin: 20px 0 ;
+}
+
+.startc
+{
+    text-decoration:line-through;
+    color: gray;
+}
+
+.finishc
+{
+    background: rgba(1, 240, 255, 1.0);
+    background: -webkit-linear-gradient(left, rgb(113, 219, 226), rgb(98, 147, 216));
+    background: -moz-linear-gradient(left, rgb(113, 219, 226), rgb(98, 147, 216));
+    background: linear-gradient(to right, rgb(113, 219, 226), rgb(98, 147, 216));
+    border-radius: 6px;
+    font-size: 28px;
+}
+.ost
+{
+    font-size: 28px;
+    border-style: dotted;    
+    border-radius: 6px;
+    width: 35px; 
+    margin: auto;
+    border-color: rgba(98, 147, 216);
+    background: rgb(135, 247, 255);
+}
+
+@media (max-width:540px) {
+    .icon
+    {
+        order: -1;
+    }
+}
+.icon
+{
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    min-width: 200px;
+}
+.icon>img{
+    height: 180px;
+
+}
+
+.forms
+{
+    background: rgba(1, 240, 255, 1.0);
+    background: -webkit-linear-gradient(left, rgb(113, 219, 226), rgb(98, 147, 216));
+    background: -moz-linear-gradient(left, rgb(113, 219, 226), rgb(98, 147, 216));
+    background: linear-gradient(to right, rgb(113, 219, 226), rgb(98, 147, 216));
+    border-radius: 6px;
+    text-align: center;
+    width: 40%;
+    min-width: 330px;
+}
+
+.ftext
+{
+ font-weight: 700;
+ margin: 10px;
+ font-size: 14px;
+}
+.vvod
+{
+   margin-bottom: 15px; 
+}
+.vvod>input
+{
+    border: solid 2px rgb(98, 147, 216);
+    height: 25px;
+    padding:5px 20px;
+}
+
+.button>input
+{
+    box-shadow: 0px 1px 17px 0px #ffffff;
+	background-color:#fbff00;
+	border-radius:16px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 15px;
+	text-decoration:none;
+    margin-bottom: 20px;
+}
+
+@font-face {
+	font-family: 'FontName'; 
+	src: url(../font/PTMono-Regular.ttf); 
+}
+
